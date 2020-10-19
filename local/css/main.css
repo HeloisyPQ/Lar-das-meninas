@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    color: white;
+}
+
+body, input, button, textarea {
+    font-size:18px;
+    line-height:1;
+    font-weight:400;
+
+}
+
+#page-lading {
+    min-height: 100vh;
+    background: linear-gradient(329.54deg, #29b6d1 0%, #00c7c7 10%);
+    text-align: center;
+}
