@@ -29,12 +29,21 @@ aside footer p{
     margin-top: .8rem;
 }
 
+#mapid{
+    width: 100%;
+    height: 100%;
+
+    animation-delay: 200ms;
+}
+
     /* Buttom */
 
 a.create-orphanage{
     position: absolute;
     right: 4rem;
     bottom: 4rem;
+
+    z-index: 10; /* Índice de profundidade na tela, eixo Z, não é o eixo X ou Y. */ 
 
     width: 6.4rem;
     height: 6.4rem;
@@ -53,4 +62,52 @@ a.create-orphanage{
 a.orphanage:hover{
     background: #17D6EB;
 
+}
+
+/* Leaflet */ 
+
+.leaflet-popup-content-wrapper{
+    /* r->red (vermelho), g-> green (verde), blue-> azul e a-> é a transparência. */
+    background: rgba(255, 255, 255, 0.8); /* 255 É o valor mais forte, no caso, a cor branca e o 0 é valor mínimo, no caso, a cor preta.*/ 
+   
+    border-radius: 20px;
+}
+
+.leaflet-popup-content{
+    color: #0089A5;
+    margin: .8rem 1.2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.leaflet-popup-content a{
+    width: 4rem;
+    height: 4rem;
+    background: #15C3D6;
+     /* Sombra: o primeiro item é o deslocamento do eixo X (horizontal), o segundo é o deslocamento do eixo Y (vertical,
+    o terceiro é o esfumaçado e o quarto item é a cor aplicada nela.*/ 
+    box-shadow: 17.2828px 27.65px 41.48px rgba(23, 142, 166, 0.16);
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: background-color .2s;
+}
+
+.leaflet-popup-content a:hover{
+    background: #17D6EB;
+}
+
+.leaflet-popup-tip {
+    display: none;
+}
+
+.leaflet-container {
+    font: 700 2rem/1 'Nunito', sans-serif;
+    z-index: 5;  /* Índice de profundidade na tela, eixo Z, não é o eixo X ou o eixo Y, nesse caso, 
+    é menor que o botão create-orphanae, assim, o botão aparecerá. */ 
 }
