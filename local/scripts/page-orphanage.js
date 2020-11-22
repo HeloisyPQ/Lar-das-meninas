@@ -35,4 +35,28 @@ L.tileLayer( // Cria o tileLayer, a primeira camada que vai recebr o mapa.
 L.marker([-8.757835, -63.872515], {icon: icon}). // Cria uma marcação na posição [Posição1, Posição2]. 
 addTo(map) // Adiciona ao mapa. 
    
-    // .openPopup(); // Abre o Pop-up. 
+    // Image gallery 
+
+    function selectImage(event) {
+        const button = event.currentTarget;
+
+        // Remosver todas as classes .active 
+        const buttons = document.querySelectorAll(".images button");
+        console.log(buttons);
+        console.log(buttons.children);
+        buttons.forEach(removeActiveClass)
+
+        function removeActiveClass(button){
+            button.classList.remove("active")
+        }
+
+        // Selecionar a imagem clicada 
+        const image = button.children[0];
+        const imageContainer = document.querySelector(".orphanage-details > img")
+
+        // Atualizar o container de imagem 
+        imageContainer.src = image.src;
+
+        // Adicionar a classe .active para este botão 
+        button.classList.add("active")
+    }
