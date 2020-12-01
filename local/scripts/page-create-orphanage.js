@@ -3,7 +3,7 @@ const options = {
     dragging: false,
     touchZoom: false,
     doubleClickZoom: false,
-    scrollWheelZoom: false,
+    scrollWheeZoom: false,
     zoomControl: false
 }
 // Variável contante const mymap, objeto L 
