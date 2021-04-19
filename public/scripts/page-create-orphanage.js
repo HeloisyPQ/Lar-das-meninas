@@ -17,7 +17,7 @@
     // Create icon. 
 
     const icon = L.icon({ // Objeto e propiedades. 
-        iconUrl : "./public/images/map-marker.svg",
+        iconUrl : "/images/map-marker.svg",
         ionSize: [58, 68], // [Largura, altura]
         iconAnchor: [29, 68], // Onde vai estar ancorado. 
     })

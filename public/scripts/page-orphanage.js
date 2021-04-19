@@ -23,7 +23,7 @@ L.tileLayer( // Cria o tileLayer, a primeira camada que vai recebr o mapa.
     // Create icon. 
     
     const icon = L.icon({ // Objeto e propiedades. 
-        iconUrl : "./public/images/map-marker.svg",
+        iconUrl : "/images/map-marker.svg",
         ionSize: [58, 68], // [Largura, altura]
         iconAnchor: [29, 68], // Onde vai estar ancorado. 
         popupAnchor: [170, 2] // Quando abrir, o popup vai ficar ao lado. 
