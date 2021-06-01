@@ -24,9 +24,9 @@
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/animations.css">
     <link rel="stylesheet" href="/css/page-orphanages.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"> 
 
-   
 </head>
 
 <body>
@@ -36,6 +36,7 @@
                 <img src="/images/map-marker.svg" alt="Happy">
 
                 <h2> Escolha um orfanato no mapa </h2>
+                
                 <p> Muitas crianças estão esperando a sua visita :) </p>
             </header>
             <footer>
@@ -44,21 +45,18 @@
             </footer>
         </aside>
 
-        <div id="mapid" class="animate-appear">
+        <div id="mapid" class="animate-appear"></div>
 
-        </div>
-
+        {{!-- Para nomes grandes fica feio, ver o que pode ser feito no SCSS. --}}
             <div class="orphanages">
 
                 {{#each orphanages}}
-
                     <span hidden 
                         data-id = "{{this.id}}"
                         data-name = "{{this.name}}"
                         data-lat = "{{this.lat}}"
                         data-lng = "{{this.lng}}"
                     ></span>
-
                 {{/each}}
 
             </div>

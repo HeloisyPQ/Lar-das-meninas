@@ -8,6 +8,10 @@ const pages = require('./pages.js');
 // Iniciando o express. 
 const server = express()
 server
+
+// Utilizar body do req.
+.use(express.urlencoded({extended: true}))
+
 // Utilizando os arquivos estáticos. 
 .use(express.static('public'))
 
@@ -18,7 +22,11 @@ server
 .get('/', pages.index)
 .get('/orphanage', pages.orphanage)
 .get('/orphanages', pages.orphanages)
+.get('/update', pages.update)
 .get('/create-orphanage', pages.createOrphanage)
+.post('/save-orphanage', pages.saveOrphanage)
+
+
 
     // console.log(request.query)
     // return response.sendFile(path.join(__dirname, 'views', 'index.html'))

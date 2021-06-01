@@ -6,12 +6,9 @@
   "scripts": {
     "start": "nodemon src/server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@gitlab.com/heloisy.pimenta1/nlw.git"
-  },
+  "repository": "git+ssh://git@gitlab.com/heloisy.pimenta1/nlw.git",
   "keywords": [],
-  "author": "",
+  "author": "HeloisyPimenta <heloisy.pimenta1@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://gitlab.com/heloisy.pimenta1/nlw/issues"
@@ -20,6 +17,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "hbs": "^4.1.1",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "sqlite-async": "^1.1.1"
   }
 }

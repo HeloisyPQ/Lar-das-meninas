@@ -43,7 +43,7 @@ let marker;
 
 // Adicionar o campo de foto
 function addPhotoField() {
-    console.log(' Teste. ');
+    //console.log(' Teste. ');
     // Pegar o container de fotos #images
     const container = document.querySelector('#images')
     // Pegar o container para duplicar .new-image
@@ -80,7 +80,7 @@ function deleteField(event) {
 
 // Select yes or no. 
 function toggleSelect(event) {
-    console.log(' Funcionando. ');
+    //console.log(' Funcionando. ');
     // Retirar a class .active (dos botões). 
     document.querySelectorAll('.button-select button')
     .forEach(function(button) {
@@ -94,4 +94,16 @@ function toggleSelect(event) {
     const input = document.querySelectorAll('[name="open_on_weekends"]')
 
     input.value = button.dataset.value
+}
+
+function validate(event) {
+    // Validar se lat e lng estão preenchidos. Fazer um if verificando os campos que estão vazios.
+    // Dá para usar o name para indicar o campo ou o nome? No caso verificar e indicar com o
+    // nome do campo ao invés de escrever um por um, ou deixar o campo em evidência com o focus.
+    const needsLatAndLng = false;
+
+    if(needsLatAndLng) {
+    event.preventDefault()
+    alert('Selecione um ponto no mapa.')
+    }
 }

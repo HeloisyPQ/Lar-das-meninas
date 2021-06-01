@@ -10,8 +10,13 @@ const options = {
 // Acessa mymap
 //e setView([Latitude, Logintude], Zoom)
 //const mymap = L.map('mapid').setView([51.505, -0.09], 15);
+
+  // Get values from html
+    const lat = document.querySelector('span[data-lat]').dataset.lat
+    const lng = document.querySelector('span[data-lng]').dataset.lng
+
     // Create map. 
-    const map = L.map('mapid', options).setView([-8.757835, -63.872515], 13); 
+    const map = L.map('mapid', options).setView([lat, lng], 13); 
 
     // Create and add tileLayer. 
 L.tileLayer( // Cria o tileLayer, a primeira camada que vai recebr o mapa. 
@@ -29,18 +34,17 @@ L.tileLayer( // Cria o tileLayer, a primeira camada que vai recebr o mapa.
         popupAnchor: [170, 2] // Quando abrir, o popup vai ficar ao lado. 
     })
 
-   
+    
     // Create and add marker. 
 
-L.marker([-8.757835, -63.872515], {icon: icon}). // Cria uma marcação na posição [Posição1, Posição2]. 
+L.marker([lat, lng], {icon: icon}). // Cria uma marcação na posição [Posição1, Posição2]. 
 addTo(map) // Adiciona ao mapa. 
    
     // Image gallery 
-
     function selectImage(event) {
         const button = event.currentTarget;
 
-        // Remosver todas as classes .active 
+        // Remover todas as classes .active 
         const buttons = document.querySelectorAll(".images button");
         console.log(buttons);
         console.log(buttons.children);
